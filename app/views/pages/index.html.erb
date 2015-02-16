@@ -67,7 +67,7 @@
 
 <!-- TWITTER FEED BEGINS HERE -->
 
-  <div class="twitter">
+  <div class="twitter" ng-show="showTwitter">
     <div class="twitter-feed">
       <ul class="media-list">
           <li class="media tweet" ng-repeat="tweet in tweets">
@@ -91,11 +91,6 @@
 
 </div><!-- Closes outer container -->
 
-<!-- FOOTER -->
-
-<footer>MPK DESIGNS</footer>
-
-Search by city: <input type='text' ng-model='s.name'>
 
 
 <!-- VALIDATION FLASH MESSAGES -->
@@ -120,7 +115,7 @@ Search by city: <input type='text' ng-model='s.name'>
        <div class="modal-content">
          <div class="modal-header">
           <button type="button" class="close x" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Login</h4>
+          <h4 class="modal-title x" id="login-title">Login</h4>
         </div>
         <div class="modal-body">
 
@@ -151,7 +146,7 @@ Search by city: <input type='text' ng-model='s.name'>
        <div class="modal-content">
          <div class="modal-header">
           <button type="button" class="close x" data-dismiss="modal" aria-hidden="true">×</button>
-          <h4 class="modal-title">Signup</h4>
+          <h4 class="modal-titlen x" id="signup-title">Signup</h4>
         </div>
         <div class="modal-body">
 
@@ -191,3 +186,8 @@ Search by city: <input type='text' ng-model='s.name'>
 <!-- HIDDEN SOUNDCLOUD IFRAME -->
 
 <iframe id="sc-widget" src=<%= "https://w.soundcloud.com/player/?url=#{@test_track}?client_id=#{ENV['soundcloud_client_id']}" %> width="0" height="0" scrolling="no" frameborder="no"></iframe>
+
+
+<!-- FOOTER -->
+
+<footer>MPK DESIGNS</footer>
